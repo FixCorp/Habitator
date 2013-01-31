@@ -11,6 +11,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.FragmentActivity;
 import android.text.format.DateFormat;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -58,9 +59,15 @@ public class AddTaskActivity extends FragmentActivity {
 		Intent intent = new Intent(this, Habitator.class);
 		EditText editText = (EditText) findViewById(R.id.name);
 		taskname = editText.getText().toString();
+		if(taskname.isEmpty()) {
+			Log.w(AddTaskActivity.class.getName(), taskname);
+		}
+		else {
+		Log.w(AddTaskActivity.class.getName(), "taskname = "+taskname+"EOF");
 		intent.putExtra("taskname", taskname);
 		intent.putExtra("time", time);
 		startActivity(intent);
+		}
 	}
 
 	

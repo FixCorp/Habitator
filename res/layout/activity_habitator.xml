@@ -9,13 +9,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="+ New Task"
-        android:onClick="addTaskActivityStarter" />
+        android:text="+ New Habit"
+        android:onClick="addTaskActivityStarter" 
+        android:background="#0099cc"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:textColor="#fff"/>
     <ListView
         android:id="@android:id/list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/addTask"
-        android:text="Habits" />
+        android:text="Habits" 
+        android:textColor="#0099cc"/>
+     <View
+		android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="#0099cc" 
+        android:layout_below="@android:id/list"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
 
 </RelativeLayout>
