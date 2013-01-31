@@ -50,10 +50,7 @@ public class Habitator extends ListActivity {
 	
 	}
 	
-	public void insertDb(String tname) {
-		Log.v("point of crash", "poc");
-
-	}
+	
 
 
 	@Override
