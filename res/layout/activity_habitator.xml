@@ -21,12 +21,18 @@
     android:id="@id/addContainer"
     android:orientation="horizontal"
     android:layout_alignParentBottom="true">
+    <!-- Dummy item to stop Edit Text to recieve focus on startup-->
+    <LinearLayout
+    android:focusable="true" android:focusableInTouchMode="true"
+    android:layout_width="0px" android:layout_height="0px"/> <!-- dummy ends -->
     <EditText
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:hint="I want to..." 
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:nextFocusUp="@id/name" 
+        android:nextFocusLeft="@id/name"/>
 	<Button 
 	android:id="@+id/plusButton"
     android:layout_width="wrap_content" 

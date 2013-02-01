@@ -8,6 +8,8 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
+import android.view.MenuItem.OnActionExpandListener;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -19,6 +21,7 @@ public class Habitator extends ListActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		//findViewById(R.id.container).requestFocus();
 		
 		EditText txt = (EditText) findViewById(R.id.name);  
 		Typeface font = Typeface.createFromAsset(getAssets(), "Molot.otf");  
@@ -58,12 +61,32 @@ public class Habitator extends ListActivity {
 	
 	
 
-
+;
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.activity_habitator, menu);
-		return true;
+	    MenuItem menuItem = menu.findItem(R.id.addTaskMenuButton);
+	    menuItem.setOnActionExpandListener(new OnActionExpandListener() {
+	        @Override
+	        public boolean onMenuItemActionCollapse(MenuItem item) {
+	            // Do something when collapsed
+	            return true;  // Return true to collapse action view
+	        }
+
+	        @Override
+	        public boolean onMenuItemActionExpand(MenuItem item) {
+	        	View vw = item.getActionView();
+	        	Log.w(Habitator.class.getName(), "Variable: "+vw);
+	        	EditText et = (EditText) vw.findViewById(R.id.actionBarEdit);
+	        	Log.w(Habitator.class.getName(), "Variable et :" +et);
+	        	et.requestFocus();
+	        	//View vie = menuItem.getActionView();
+	            // Do something when expanded
+	            return true;  // Return true to expand action view
+	        }
+	    });
+	    return true;
 	}
 
 	public void addTaskActivityStarter(View view){
