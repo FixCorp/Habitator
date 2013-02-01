@@ -2,32 +2,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Habitator" >
-
-    <Button
-        android:id="@+id/addTask"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="+ New Habit"
-        android:onClick="addTaskActivityStarter" 
-        android:background="#0099cc"
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="0dp"
-        android:textColor="#fff"/>
-    <ListView
+    tools:context=".Habitator" 
+    android:id="@+id/container">
+    
+   <ListView
         android:id="@android:id/list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/addTask"
+        android:layout_height="match_parent"
         android:text="Habits" 
-        android:textColor="#0099cc"/>
-     <View
-		android:layout_width="fill_parent"
-        android:layout_height="1dip"
-        android:background="#0099cc" 
-        android:layout_below="@android:id/list"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp" />
+        android:textColor="#0099cc"
+        android:layout_above="@+id/addContainer"/>
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp" 
+    android:id="@id/addContainer"
+    android:orientation="horizontal"
+    android:layout_alignParentBottom="true">
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:hint="I want to..." 
+        android:layout_weight="1"/>
+	<Button 
+	android:id="@+id/plusButton"
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content"
+    android:background="#0099dd"
+    android:textColor="#fff"
+    android:text="+" 
+    android:textSize="30dp"
+    />
+</LinearLayout>
 
+
+	
 </RelativeLayout>

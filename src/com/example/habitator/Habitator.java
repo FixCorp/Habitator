@@ -4,11 +4,13 @@ import java.util.List;
 
 import android.app.ListActivity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 
 public class Habitator extends ListActivity {
 	private TasksDataSource datasource;
@@ -17,6 +19,10 @@ public class Habitator extends ListActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		EditText txt = (EditText) findViewById(R.id.name);  
+		Typeface font = Typeface.createFromAsset(getAssets(), "Molot.otf");  
+		//txt.setTypeface(font);  
 		
 		Intent intent = getIntent();
 		taskname = intent.getStringExtra("taskname");

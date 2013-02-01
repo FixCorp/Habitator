@@ -14,9 +14,11 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int addTask=0x7f070002;
-        public static final int menu_settings=0x7f070003;
+        public static final int addContainer=0x7f070003;
+        public static final int container=0x7f070002;
+        public static final int menu_settings=0x7f070005;
         public static final int name=0x7f070000;
+        public static final int plusButton=0x7f070004;
         public static final int timepicker=0x7f070001;
     }
     public static final class layout {
@@ -58,8 +60,11 @@ public final class R {
          */
         public static final int AppBaseTheme=0x7f050000;
         /**  Application theme. 
- All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f050001;
+        public static final int MyActionBar=0x7f050004;
+        public static final int MyActionBar_TitleTextStyle=0x7f050005;
+        public static final int MyTheme=0x7f050003;
+        public static final int Theme_Main=0x7f050002;
     }
 }
