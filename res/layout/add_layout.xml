@@ -19,13 +19,14 @@
         android:textCursorDrawable="@null"
         android:textColorHint="#ddd"/>
     	<ImageButton 
-			android:id="@+id/plusButton"
+			android:id="@+id/TicButton"
 		    android:layout_width="wrap_content" 
  		   	android:layout_height="wrap_content"
     		android:background="#0099ee"
     		android:textColor="#fff"
     		android:src="@drawable/navigation_accept"
-    		android:layout_marginTop="10dp"/>
+    		android:layout_marginTop="10dp"
+    		android:onClick="insertToDb"/>
 
 </LinearLayout>
     
