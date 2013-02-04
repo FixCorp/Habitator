@@ -25,6 +25,7 @@
     		android:background="#0099ee"
     		android:textColor="#fff"
     		android:src="@drawable/navigation_accept"
+    		android:onClick="insertToDb"
     		android:layout_marginTop="10dp"/>
 
 </LinearLayout>

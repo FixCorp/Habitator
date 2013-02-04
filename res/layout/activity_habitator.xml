@@ -40,6 +40,7 @@
     android:background="#0099dd"
     android:textColor="#fff"
     android:text="+" 
+    android:onClick="insertToDbFoot"
     android:textSize="30dp"
     />
 </LinearLayout>

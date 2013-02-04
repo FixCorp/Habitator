@@ -16,19 +16,17 @@ public final class R {
         public static final int navigation_accept=0x7f020002;
     }
     public static final class id {
-        public static final int actionBarEdit=0x7f070005;
-        public static final int addContainer=0x7f070003;
-        public static final int addTaskMenuButton=0x7f070007;
-        public static final int container=0x7f070002;
-        public static final int menu_settings=0x7f070006;
-        public static final int name=0x7f070000;
-        public static final int plusButton=0x7f070004;
-        public static final int timepicker=0x7f070001;
+        public static final int actionBarEdit=0x7f070004;
+        public static final int addContainer=0x7f070001;
+        public static final int addTaskMenuButton=0x7f070006;
+        public static final int container=0x7f070000;
+        public static final int menu_settings=0x7f070005;
+        public static final int name=0x7f070002;
+        public static final int plusButton=0x7f070003;
     }
     public static final class layout {
-        public static final int activity_add_task=0x7f030000;
-        public static final int activity_habitator=0x7f030001;
-        public static final int add_layout=0x7f030002;
+        public static final int activity_habitator=0x7f030000;
+        public static final int add_layout=0x7f030001;
     }
     public static final class menu {
         public static final int activity_add_task=0x7f060000;
