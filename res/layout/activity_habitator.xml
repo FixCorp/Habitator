@@ -11,40 +11,8 @@
         android:layout_height="match_parent"
         android:text="Habits" 
         android:textColor="#0099cc"
-        android:layout_above="@+id/addContainer"/>
-<LinearLayout
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    android:paddingBottom="16dp" 
-    android:id="@id/addContainer"
-    android:orientation="horizontal"
-    android:layout_alignParentBottom="true">
-    <!-- Dummy item to stop Edit Text to recieve focus on startup-->
-    <LinearLayout
-    android:focusable="true" android:focusableInTouchMode="true"
-    android:layout_width="0px" android:layout_height="0px"/> <!-- dummy ends -->
-    <EditText
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:hint="I want to..." 
-        android:layout_weight="1"
-        android:nextFocusUp="@id/name" 
-        android:nextFocusLeft="@id/name"/>
-	<Button 
-	android:id="@+id/plusButton"
-    android:layout_width="wrap_content" 
-    android:layout_height="wrap_content"
-    android:background="#0099dd"
-    android:textColor="#fff"
-    android:text="+" 
-    android:onClick="insertToDbFoot"
-    android:textSize="30dp"
-    />
-</LinearLayout>
-
+        android:layout_above="@+id/addContainer"
+        android:choiceMode="multipleChoice"/>
 
 	
 </RelativeLayout>

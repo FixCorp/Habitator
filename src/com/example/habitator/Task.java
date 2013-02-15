@@ -1,5 +1,12 @@
 package com.example.habitator;
 
+import android.app.Activity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
 public class Task {
 	private long id;
 	private String task;
@@ -32,5 +39,6 @@ public class Task {
 	public void setDate(int date){
 		this.initdate = date;
 	}
+	
 	
 }

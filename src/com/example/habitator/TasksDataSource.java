@@ -1,6 +1,7 @@
 package com.example.habitator;
 
 import java.util.ArrayList;
+
 import java.util.List;
 
 import android.content.ContentValues;
@@ -8,6 +9,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.view.View;
 
 
 public class TasksDataSource {
@@ -30,6 +32,8 @@ public class TasksDataSource {
 	  dbhelper.close();
   }
   
+ 
+  
   public Task createTask(String task) {
 	  ContentValues values = new ContentValues();
 	  values.put(MySqliteHelper.COLUMN_TASK, task);
@@ -44,11 +48,16 @@ public class TasksDataSource {
 	  return newTask;
   }
   
-  public void deleteTask(Task task) {
-	  long id = task.getId();
+  public void deleteTask(long id) {
 	  System.out.println("Task deleted with id: "+id);
-	  database.delete(MySqliteHelper.TABLE_TASKS, MySqliteHelper.COLUMN_ID+ " = " +id, null);
+	  database.delete(MySqliteHelper.TABLE_TASKS, MySqliteHelper.COLUMN_ID + " = " + id, null);
 	 
+  }
+  
+  public void deleteMultipleTasks(long[] taskIds) {
+	  for (int id=0; id<taskIds.length; id++) {
+	  database.delete(MySqliteHelper.TABLE_TASKS, MySqliteHelper.COLUMN_ID + " = " + taskIds[id], null);
+	  }
   }
   public List<Task> getAllTasks() {
 	  List<Task> tasks = new ArrayList<Task>();

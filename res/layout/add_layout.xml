@@ -18,16 +18,15 @@
         android:background="#0099ee" 
         android:textCursorDrawable="@null"
         android:textColorHint="#ddd"/>
-    	<ImageButton 
-			android:id="@+id/plusButton"
-		    android:layout_width="wrap_content" 
- 		   	android:layout_height="wrap_content"
-    		android:background="#0099ee"
-    		android:textColor="#fff"
-    		android:src="@drawable/navigation_accept"
-    		android:onClick="insertToDb"
-    		android:layout_marginTop="10dp"/>
-
+  	<ImageButton 
+		android:id="@+id/TicButton"
+		android:layout_width="48dp" 
+ 		android:layout_height="48dp"
+    	android:textColor="#fff"
+    	android:src="@drawable/navigation_accept"
+    	android:onClick="insertToDb"
+    	android:layout_gravity="left"
+    	android:layout_marginBottom="30dp"/>
 </LinearLayout>
     
     

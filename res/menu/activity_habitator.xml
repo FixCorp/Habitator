@@ -6,6 +6,17 @@
         android:showAsAction="always|collapseActionView"
         android:icon="@drawable/content_new"
         android:title="Add Habit"
-        android:actionLayout="@layout/add_layout"/>
-		
+        android:actionLayout="@layout/add_layout"
+       />
+    <item
+        android:id="@+id/editTaskMenuButton"
+        android:showAsAction="always"
+        android:title="Edit"
+		/>
+  
+   <item
+        android:id="@+id/deleteTaskMenuButton"
+        android:showAsAction="always"
+        android:title="Delete"
+       />
 </menu>
