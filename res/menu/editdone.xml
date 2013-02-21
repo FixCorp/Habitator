@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:title="Habitator" 
+        />
+     <item
+        android:id="@+id/cancel"
+        android:title="Edit_cancel"
+        /> 
+   <item
+        android:id="@+id/done"
+        android:title="Edit_done"
+       /> 
+</menu>

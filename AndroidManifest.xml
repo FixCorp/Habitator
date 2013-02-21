@@ -27,6 +27,10 @@
             android:label="@string/title_activity_add_task" >
         </activity>
         <activity
+            android:name="com.example.habitator.EditTask"
+            android:label="@string/title_activity_edit_task" >
+        </activity>
+        <activity
             android:name="com.example.habitator.DeleteActivity"
             android:label="@string/title_activity_delete" >
         </activity>

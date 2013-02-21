@@ -51,7 +51,7 @@ public class TasksDataSource {
   public void deleteTask(long id) {
 	  System.out.println("Task deleted with id: "+id);
 	  database.delete(MySqliteHelper.TABLE_TASKS, MySqliteHelper.COLUMN_ID + " = " + id, null);
-	 
+
   }
   
   public void deleteMultipleTasks(long[] taskIds) {
@@ -68,9 +68,24 @@ public class TasksDataSource {
 		  tasks.add(task);
 		  cursor.moveToNext();
 	  }
-	  
+
 	  cursor.close();
 	  return tasks;
+  }
+  
+  public void updateTask(long iid,String task) {
+	  ContentValues values = new ContentValues();
+	//  itemid = getIntent().getExtras().getLong("ITEM_ID");
+	  values.put(MySqliteHelper.COLUMN_TASK, iid);
+	  values.put(MySqliteHelper.COLUMN_TASK, task);
+	 //values.put(MySqliteHelper.COLUMN_TIME, 900);
+	  //values.put(MySqliteHelper.COLUMN_INITDATE,120913);
+	  //long rowid = database.insert(MySqliteHelper.TABLE_TASKS, null, values);
+	  database.update(MySqliteHelper.TABLE_TASKS, values, "_id=" + iid, null);
+
+	  Cursor cursor = database.query(MySqliteHelper.TABLE_TASKS,allColumns, MySqliteHelper.COLUMN_ID + " = " + iid, null, null, null, null);
+//	  cursor.moveToFirst();
+	  cursor.close();
   }
   
   private Task cursorToTask(Cursor cursor) {
@@ -80,7 +95,7 @@ public class TasksDataSource {
 	  task1.setTime(cursor.getInt(2));
 	  task1.setDate(cursor.getInt(3));
 	  return task1;
-	 
+
   	}
 
 }

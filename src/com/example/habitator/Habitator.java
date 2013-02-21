@@ -63,7 +63,7 @@ public class Habitator extends ListActivity {
 		List<Task> values = datasource.getAllTasks(); // A List Variable of Type 'Task' is initiated to getAllTasks in a variable 'values'; Task is the object we defined in Task.java
 
 		
-	    ArrayAdapter<Task> adapter = new ArrayAdapter<Task>(this, R.layout.task, R.id.task, values); //An ArrayAdapter in initialised with the specified layout to populate the ListView with 'values'
+	    ArrayAdapter<Task> adapter = new ArrayAdapter<Task>(this, android.R.layout.simple_list_item_1, values); //An ArrayAdapter in initialised with the specified layout to populate the ListView with 'values'
 		setListAdapter(adapter); //I don't exactly know how ArrayAdapter is used with List variable :(
 		int oldcount=adapter.getCount();
 		Log.w("old count :", ""+oldcount);
@@ -236,10 +236,14 @@ public class Habitator extends ListActivity {
 	    switch (item.getItemId()) {
 	        case R.id.deleteTaskMenuButton:
 	            // app icon in action bar clicked; go home
-	            Intent intent = new Intent(this, DeleteActivity.class);
-	            startActivity(intent);
+	            Intent goToDeleteActivity = new Intent(this, DeleteActivity.class);
+	            startActivity(goToDeleteActivity);
 	            return true;
-	        default:
+	       case R.id.editTaskMenuButton:          
+	        	Intent goToEditActivity = new Intent(this, EditTask.class);
+	       	    startActivity(goToEditActivity);
+	       	    return true;
+	     default:
 	            return super.onOptionsItemSelected(item);
 	    }
 	}
@@ -259,7 +263,7 @@ public class Habitator extends ListActivity {
 		//Log.v("adfdf", "taskname :"+taskname);
 		//Log.v("flow :"," calling insertIntoDb with parameter taskname");
 		
-		ArrayAdapter<Task> adapter1 = (ArrayAdapter<Task>) getListAdapter(); // setListAdapter() 
+	    ArrayAdapter<Task> adapter1 = (ArrayAdapter<Task>) getListAdapter(); // setListAdapter() 
 	    Task task = null; // initialize a Task Object. This wil be used in 'task = datasource.createTask(taskname)'
 	    task = datasource.createTask(taskname); //method 'createTask()' returns the newly created 'Task' Object. Assign it to 'task' 
 	    adapter1.add(task); //add task to adapter
@@ -272,6 +276,9 @@ public class Habitator extends ListActivity {
 
 	protected void onResume() {
 		datasource.open();
+		List<Task> values = datasource.getAllTasks(); // A List Variable of Type 'Task' is initiated to getAllTasks in a variable 'values'; Task is the object we defined in Task.java
+	    ArrayAdapter<Task> adapter = new ArrayAdapter<Task>(this, android.R.layout.simple_list_item_1, values); //An ArrayAdapter in initialised with the specified layout to populate the ListView with 'values'
+		setListAdapter(adapter);
 		super.onResume();
 	}
 	

@@ -12,7 +12,8 @@
         android:text="Habits" 
         android:textColor="#0099cc"
         android:layout_above="@+id/addContainer"
-        android:choiceMode="multipleChoice"/>
+        android:choiceMode="multipleChoice"
+        android:layout_margin="16dp"/>
 
 	
 </RelativeLayout>

@@ -10,7 +10,8 @@
         android:layout_height="match_parent"
         android:text="Habits" 
         android:textColor="#0099cc"
-        android:choiceMode="multipleChoice"/>
+        android:choiceMode="multipleChoice"
+        android:layout_margin="16dp"/>
 
 
 </RelativeLayout>

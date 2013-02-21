@@ -10,13 +10,13 @@
        />
     <item
         android:id="@+id/editTaskMenuButton"
-        android:showAsAction="always"
         android:title="Edit"
+        android:icon="@drawable/edit"
 		/>
   
    <item
         android:id="@+id/deleteTaskMenuButton"
-        android:showAsAction="always"
         android:title="Delete"
+        android:icon="@drawable/delete"
        />
 </menu>

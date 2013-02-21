@@ -4,7 +4,9 @@
     <string name="app_name">Habitator</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
-    <string name="title_activity_add_task">AddTaskActivity</string>
-    <string name="title_activity_delete">DeleteActivity</string>
+    <string name="title_activity_add_task">Add New Habit</string>
+    <string name="title_activity_delete">Delete</string>
+    <string name="title_activity_edit_task">Edit</string>
+    
 
 </resources>
